@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CHAI TABELA — A perfect blend of chai, food and moments.">
+  <title>CHAI TABELA | Cafe & Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home"><span class="brand-mark">CT</span><span>CHAI <b>TABELA</b><small>CAFE • RESTAURANT</small></span></a>
+    <nav><a href="#home">Home</a><a href="#menu">Our Menu</a><a href="#story">Our Story</a><a href="#visit">Visit Us</a></nav>
+    <a class="header-order" href="#menu">Order Now <span>↗</span></a>
+    <button class="mobile-menu" aria-label="Open menu" onclick="document.body.classList.toggle('nav-open')">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-image"></div>
+      <div class="hero-content">
+        <p class="eyebrow">GOOD CHAI. GOOD FOOD. GOOD TIMES.</p>
+        <h1>Every cup has<br><em>a story.</em></h1>
+        <p class="hero-copy">Your everyday escape for comforting chai, delicious bites and moments worth sharing.</p>
+        <div class="hero-actions"><a class="button button-gold" href="#menu">Explore Our Menu <span>↗</span></a><a class="text-link" href="#story">Discover our story</a></div>
+        <div class="hero-note"><span>✳</span> BREWED WITH LOVE, SERVED WITH SOUL</div>
+      </div>
+      <div class="hero-stamp">A LITTLE<br>PAUSE, A LOT<br>OF HAPPINESS</div>
+    </section>
+
+    <section class="intro section-wrap" id="story">
+      <div><p class="eyebrow">WELCOME TO CHAI TABELA</p><h2>More than a cafe.<br><em>It's your happy place.</em></h2></div>
+      <p class="intro-copy">From the first sip of freshly brewed chai to the last bite of your favourite snack, CHAI TABELA is made for conversations, cravings and little everyday celebrations.</p>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-wrap">
+        <div class="section-heading"><div><p class="eyebrow">MADE FRESH, JUST FOR YOU</p><h2>Explore the <em>menu.</em></h2></div><p>Find your favourite. Add it to your basket.<br>We'll take care of the rest.</p></div>
+        <div class="category-row" id="categories"></div>
+        <div class="menu-grid" id="menuGrid"></div>
+      </div>
+    </section>
+
+    <section class="order-banner">
+      <div><p class="eyebrow">YOUR FAVOURITES, JUST A MESSAGE AWAY</p><h2>Craving something<br><em>delicious?</em></h2><p>Choose your favourites and place your order through WhatsApp.</p></div>
+      <a class="button button-light" href="#menu">Start Your Order ↗</a>
+    </section>
+
+    <section class="visit section-wrap" id="visit">
+      <div><p class="eyebrow">COME ON IN</p><h2>Chai tastes better<br><em>together.</em></h2><p>Drop by for a cup, stay for the conversations. We can't wait to welcome you.</p></div>
+      <div class="visit-card"><h3>Visit CHAI TABELA</h3><p><b>Address</b><br><span>Update your cafe address here</span></p><p><b>Opening hours</b><br><span>Update your opening hours here</span></p><p><b>Call us</b><br><span>Update your phone number here</span></p><a class="text-link" href="#" onclick="alert('Add your Google Maps link in script.js');return false;">Get directions ↗</a></div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">CT</span><span>CHAI <b>TABELA</b><small>CAFE • RESTAURANT</small></span></a><p>Good chai. Good food. Good times.</p><small>© <span id="year"></span> CHAI TABELA. All rights reserved.</small></footer>
+
+  <button class="cart-fab" id="cartFab" onclick="openCart()">Basket <span id="cartCount">0</span></button>
+  <div class="cart-overlay" id="cartOverlay" onclick="if(event.target===this)closeCart()">
+    <aside class="cart-panel"><div class="cart-head"><h2>Your basket</h2><button onclick="closeCart()" aria-label="Close basket">✕</button></div><div id="cartItems" class="cart-items"><p class="empty-cart">Your basket is waiting for something delicious.</p></div><div class="cart-bottom"><div class="cart-total"><span>Total</span><b id="cartTotal">₹0</b></div><button class="button button-gold checkout" onclick="checkout()">Order on WhatsApp ↗</button><small>Demo menu prices are editable. Confirm availability when ordering.</small></div></aside>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
